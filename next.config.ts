@@ -4,6 +4,18 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   // Add PostHog rewrites
+
+  cacheComponents : true,
+
+  images : {
+    remotePatterns  : [
+      {
+        protocol : 'https',
+        hostname : "res.cloudinary.com"
+      }
+    ]
+  },
+
   async rewrites() {
     return [
       {
